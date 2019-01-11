@@ -7,7 +7,7 @@ app = Flask(__name__)
 # You can get the User ID from the URL of any profile.
 # For example: https://stackoverflow.com/users/8826629/joel-guerra-msft the ID is 8826629
 
-STACK_IDS=('8826629')
+STACK_IDS=('3938486')
 
 # You will need your own Stack Exchange API key
 # Register for one here: https://stackapps.com/apps/oauth/register
@@ -31,7 +31,7 @@ def index(users=None):
 @app.route('/week')
 def total(users=None):
     jsons = rank_users("reputation_change_week")
-    return render_template('index.html', users=jsons, title="Rep Change this Week") 
+    return render_template('index.html', users=jsons, title="Rep Change this Week")
 
 @app.route('/month')
 def month(users=None):
